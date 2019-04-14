@@ -745,7 +745,7 @@ config DEBUG_STACKOVERFLOW
 
 	  If in doubt, say "N".
 
-source "lib/Kconfig.kasan"
+# source "lib/Kconfig.kasan"
 
 endmenu # "Memory Debugging"
 
@@ -1624,7 +1624,7 @@ config LATENCYTOP
 	  Enable this option if you want to use the LatencyTOP tool
 	  to find out which userspace is blocking on what kernel operations.
 
-source "kernel/trace/Kconfig"
+# source "kernel/trace/Kconfig"
 
 config PROVIDE_OHCI1394_DMA_INIT
 	bool "Remote debugging over FireWire early on boot"
@@ -2024,11 +2024,11 @@ config BUG_ON_DATA_CORRUPTION
 
 	  If unsure, say N.
 
-source "samples/Kconfig"
+# source "samples/Kconfig"
 
-source "lib/Kconfig.kgdb"
+# source "lib/Kconfig.kgdb"
 
-source "lib/Kconfig.ubsan"
+# source "lib/Kconfig.ubsan"
 
 config ARCH_HAS_DEVMEM_IS_ALLOWED
 	bool
