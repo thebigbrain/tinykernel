@@ -3,16 +3,16 @@ menu "Device Drivers"
 
 # Keep I/O buses first
 
-# source "drivers/amba/Kconfig"
+source "drivers/amba/Kconfig"
 # source "drivers/eisa/Kconfig"
-# source "drivers/pci/Kconfig"
+source "drivers/pci/Kconfig"
 # source "drivers/pcmcia/Kconfig"
-# source "drivers/rapidio/Kconfig"
+source "drivers/rapidio/Kconfig"
 
 
-# source "drivers/base/Kconfig"
+source "drivers/base/Kconfig"
 
-# source "drivers/bus/Kconfig"
+source "drivers/bus/Kconfig"
 
 # source "drivers/connector/Kconfig"
 
@@ -26,17 +26,17 @@ menu "Device Drivers"
 
 # source "drivers/pnp/Kconfig"
 
-# source "drivers/block/Kconfig"
+source "drivers/block/Kconfig"
 
-# source "drivers/nvme/Kconfig"
+source "drivers/nvme/Kconfig"
 
 # # misc before ide - BLK_DEV_SGIIOC4 depends on SGI_IOC4
 
-# source "drivers/misc/Kconfig"
+source "drivers/misc/Kconfig"
 
 # source "drivers/ide/Kconfig"
 
-# source "drivers/scsi/Kconfig"
+source "drivers/scsi/Kconfig"
 
 # source "drivers/ata/Kconfig"
 
@@ -46,11 +46,11 @@ menu "Device Drivers"
 
 # source "drivers/message/fusion/Kconfig"
 
-# source "drivers/firewire/Kconfig"
+source "drivers/firewire/Kconfig"
 
-# source "drivers/macintosh/Kconfig"
+source "drivers/macintosh/Kconfig"
 
-# source "drivers/net/Kconfig"
+source "drivers/net/Kconfig"
 
 # source "drivers/isdn/Kconfig"
 
@@ -60,11 +60,11 @@ menu "Device Drivers"
 
 # source "drivers/input/Kconfig"
 
-# source "drivers/char/Kconfig"
+source "drivers/char/Kconfig"
 
-# source "drivers/i2c/Kconfig"
+source "drivers/i2c/Kconfig"
 
-# source "drivers/i3c/Kconfig"
+source "drivers/i3c/Kconfig"
 
 # source "drivers/spi/Kconfig"
 
@@ -82,7 +82,7 @@ menu "Device Drivers"
 
 # source "drivers/w1/Kconfig"
 
-# source "drivers/power/Kconfig"
+source "drivers/power/Kconfig"
 
 # source "drivers/hwmon/Kconfig"
 
@@ -94,13 +94,13 @@ menu "Device Drivers"
 
 # source "drivers/bcma/Kconfig"
 
-# source "drivers/mfd/Kconfig"
+source "drivers/mfd/Kconfig"
 
 # source "drivers/regulator/Kconfig"
 
-# source "drivers/media/Kconfig"
+source "drivers/media/Kconfig"
 
-# source "drivers/video/Kconfig"
+source "drivers/video/Kconfig"
 
 # source "sound/Kconfig"
 
@@ -110,7 +110,7 @@ menu "Device Drivers"
 
 # source "drivers/uwb/Kconfig"
 
-# source "drivers/mmc/Kconfig"
+source "drivers/mmc/Kconfig"
 
 # source "drivers/memstick/Kconfig"
 
@@ -130,7 +130,7 @@ menu "Device Drivers"
 
 # source "drivers/dca/Kconfig"
 
-# source "drivers/auxdisplay/Kconfig"
+source "drivers/auxdisplay/Kconfig"
 
 # source "drivers/uio/Kconfig"
 
@@ -148,13 +148,13 @@ menu "Device Drivers"
 
 # source "drivers/staging/Kconfig"
 
-# source "drivers/platform/Kconfig"
+source "drivers/platform/Kconfig"
 
-# source "drivers/clk/Kconfig"
+source "drivers/clk/Kconfig"
 
 # source "drivers/hwspinlock/Kconfig"
 
-# source "drivers/clocksource/Kconfig"
+source "drivers/clocksource/Kconfig"
 
 # source "drivers/mailbox/Kconfig"
 
@@ -180,9 +180,9 @@ menu "Device Drivers"
 
 # source "drivers/vme/Kconfig"
 
-# source "drivers/pwm/Kconfig"
+source "drivers/pwm/Kconfig"
 
-# source "drivers/irqchip/Kconfig"
+source "drivers/irqchip/Kconfig"
 
 # source "drivers/ipack/Kconfig"
 
@@ -210,7 +210,7 @@ menu "Device Drivers"
 
 # source "drivers/nvmem/Kconfig"
 
-# source "drivers/hwtracing/Kconfig"
+source "drivers/hwtracing/Kconfig"
 
 # source "drivers/fpga/Kconfig"
 
