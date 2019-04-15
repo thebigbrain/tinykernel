@@ -27,7 +27,7 @@ config FS_MBCACHE
 # source "fs/reiserfs/Kconfig"
 # source "fs/jfs/Kconfig"
 
-# source "fs/xfs/Kconfig"
+source "fs/xfs/Kconfig"
 # source "fs/gfs2/Kconfig"
 # source "fs/ocfs2/Kconfig"
 # source "fs/btrfs/Kconfig"
@@ -254,11 +254,11 @@ if MISC_FILESYSTEMS
 # source "fs/pstore/Kconfig"
 # source "fs/sysv/Kconfig"
 # source "fs/ufs/Kconfig"
-# source "fs/exofs/Kconfig"
+source "fs/exofs/Kconfig"
 
 endif # MISC_FILESYSTEMS
 
-# source "fs/exofs/Kconfig.ore"
+source "fs/exofs/Kconfig.ore"
 
 menuconfig NETWORK_FILESYSTEMS
 	bool "Network File Systems"
