@@ -25,7 +25,7 @@ source "fs/Kconfig"
 
 source "security/Kconfig"
 
-source "crypto/Kconfig"
+# source "crypto/Kconfig"
 
 source "lib/Kconfig"
 
