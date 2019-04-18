@@ -104,7 +104,7 @@ static void setup_idt(void)
 void go_to_protected_mode(void)
 {
 	/* Hook before leaving real mode, also disables interrupts */
-	realmode_switch_hook();
+	BOOT_TRACE(realmode_switch_hook());
 
 	/* Enable the A20 gate */
 	if (enable_a20()) {
@@ -113,7 +113,7 @@ void go_to_protected_mode(void)
 	}
 
 	/* Reset coprocessor (IGNNE#) */
-	reset_coprocessor();
+	BOOT_TRACE(reset_coprocessor());
 
 	/* Mask all interrupts in the PIC */
 	mask_all_interrupts();

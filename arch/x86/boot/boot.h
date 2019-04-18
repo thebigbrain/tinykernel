@@ -16,6 +16,8 @@
 #ifndef BOOT_BOOT_H
 #define BOOT_BOOT_H
 
+#define BOOT_TRACE(fn)	puts("early stage: " #fn "...   ");fn;puts("ok\n")
+
 #define STACK_SIZE	1024	/* Minimum number of bytes for stack */
 
 #ifndef __ASSEMBLY__

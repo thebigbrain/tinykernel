@@ -135,15 +135,15 @@ static void init_heap(void)
 void main(void)
 {
 	/* First, copy the boot header into the "zeropage" */
-	copy_boot_params();
+	BOOT_TRACE(copy_boot_params());
 
 	/* Initialize the early-boot console */
-	console_init();
+	BOOT_TRACE(console_init());
 	if (cmdline_find_option_bool("debug"))
 		puts("early console in setup code\n");
 
 	/* End of heap check */
-	init_heap();
+	BOOT_TRACE(init_heap());
 
 	/* Make sure we have all the proper CPU support */
 	if (validate_cpu()) {
@@ -175,7 +175,7 @@ void main(void)
 #endif
 
 	/* Set the video mode */
-	set_video();
+	BOOT_TRACE(set_video());
 
 	/* Do the last things and invoke protected mode */
 	go_to_protected_mode();
