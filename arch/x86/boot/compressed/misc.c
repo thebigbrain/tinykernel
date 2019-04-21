@@ -414,13 +414,8 @@ asmlinkage __visible void *extract_kernel(void *rmode, memptr heap,
 #endif
 
 	debug_putstr("\nDecompressing Linux... ");
-	int dc_error = __decompress(input_data, input_len, NULL, NULL, output, output_len,
+	__decompress(input_data, input_len, NULL, NULL, output, output_len,
 			NULL, error);
-	if (dc_error == 0) {
-		debug_putstr("\nuncompressing success\n");
-	} else {
-		error("uncompress error");
-	}
 	parse_elf(output);
 	handle_relocations(output, output_len, virt_addr);
 	debug_putstr("done.\nBooting the kernel.\n");
