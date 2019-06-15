@@ -118,8 +118,12 @@ static void init_heap(void)
 	char *stack_end;
 
 	if (boot_params.hdr.loadflags & CAN_USE_HEAP) {
-		asm("leal %P1(%%esp),%0"
-		    : "=r" (stack_end) : "i" (-STACK_SIZE));
+		// asm("leal %P1(%%esp),%0"
+		//     : "=r" (stack_end) : "i" (-STACK_SIZE));
+		// https://stackoverflow.com/questions/37532424/what-does-p-stand-for-in-gcc-inline-assembly
+		char *stack_pointer;
+ 		asm ("mov %%esp, %0" : "=r" (stack_pointer));
+ 		stack_end = stack_pointer - STACK_SIZE;
 
 		heap_end = (char *)
 			((size_t)boot_params.hdr.heap_end_ptr + 0x200);
@@ -135,15 +139,15 @@ static void init_heap(void)
 void main(void)
 {
 	/* First, copy the boot header into the "zeropage" */
-	BOOT_TRACE(copy_boot_params());
+	copy_boot_params();
 
 	/* Initialize the early-boot console */
-	BOOT_TRACE(console_init());
+	console_init();
 	if (cmdline_find_option_bool("debug"))
 		puts("early console in setup code\n");
 
 	/* End of heap check */
-	BOOT_TRACE(init_heap());
+	init_heap();
 
 	/* Make sure we have all the proper CPU support */
 	if (validate_cpu()) {
@@ -175,7 +179,7 @@ void main(void)
 #endif
 
 	/* Set the video mode */
-	BOOT_TRACE(set_video());
+	set_video();
 
 	/* Do the last things and invoke protected mode */
 	go_to_protected_mode();

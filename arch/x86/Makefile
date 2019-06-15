@@ -260,7 +260,7 @@ boot := arch/x86/boot
 
 BOOT_TARGETS = bzlilo bzdisk fdimage fdimage144 fdimage288 isoimage
 
-PHONY += bzImage $(BOOT_TARGETS)
+PHONY += bzImage $(BOOT_TARGETS) arch
 
 # Default kernel to build
 all: bzImage
@@ -278,6 +278,9 @@ endif
 
 $(BOOT_TARGETS): vmlinux
 	$(Q)$(MAKE) $(build)=$(boot) $@
+
+setup:
+	$(Q)$(MAKE) $(build)=$(boot) $(boot)/setup.elf
 
 PHONY += install
 install:
