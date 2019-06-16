@@ -1,0 +1,6 @@
+arch: x86_64
+cflags: -g -Wall
+cc: gcc $cflags -c $in -o $out
+build:
+  - header.o: header.S
+  - main.o: main.c
